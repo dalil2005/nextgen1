@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+}
+
+form{
+  padding:20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.row .col{
+  flex:1 1 250px;
+}
+
+.row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.row .col .inputBox{
+  margin:15px 0;
+}
+
+.row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.submit-btn{
+  background: #15c455;
+  color:#fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #8FBB99;
+}

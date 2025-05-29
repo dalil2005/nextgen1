@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+/* Navigation Styles */
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+
+
+.signup-login {
+    display: flex;
+    gap: 1rem;
+}
+
+.signup-login a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.signup-login a:first-child {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.signup-login a:last-child {
+    background: #25D366;
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.slides {
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 30px;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 30px;
+}
+
+.slide:nth-child(1) {
+    background-image: url('../images/1.jpg');
+}
+
+.slide:nth-child(2) {
+    background-image: url('../images/4.png');
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+}
+
+.slide-content h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.slide-content p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Slider Navigation */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+}
+
+.slider-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+.dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background: #25D366;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E;
+}
+
+.whatsapp-button svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}
+
+/* About Us Section */
+.aboutUs {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.aboutUs .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.aboutUs .box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.aboutUs .box img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.aboutUs .box h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 2rem;
+}
+
+.services .label {
+    text-transform: uppercase;
+    color: #25D366;
+    margin-bottom: 1rem;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.services .gallery .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.services .gallery .box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.services .gallery .box:hover img {
+    transform: scale(1.1);
+}
+
+.services .gallery .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mapouter {
+    width: 100%;
+    height: 363px;
+    margin-bottom: 2rem;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 363px;
+}
+
+.gmap_iframe {
+    height: 363px !important;
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: #0D4715;
+    color: white;
+    padding: 4rem 2rem 2rem;
+    
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer .detail h3 {
+    margin-bottom: 1rem;
+}
+
+.footer .social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .social a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer .about-us h4 {
+    margin-bottom: 1rem;
+}
+
+.footer .about-us ul {
+    list-style: none;
+}
+
+.footer .about-us ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer .about-us ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer .copyright {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+}
+
+.footer .copyright a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+    
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 2rem;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+    }
+    
+    .menu ul li {
+        margin: 1rem 0;
+    }
+    
+    .bar {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .footer .copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
